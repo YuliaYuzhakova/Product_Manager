@@ -50,4 +50,5 @@ public class ProductManagerTest {
         Product[] expected = new Product[]{};
         Assertions.assertArrayEquals(expected, actual);
     }
+
 }
