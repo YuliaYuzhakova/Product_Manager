@@ -19,6 +19,8 @@ public class ProductManagerTest {
     Product four = new Smartphone(4, "IPone 11", 50000, "USA");
     Product five = new Smartphone(5, "IPone 12", 70000, "USA");
     Product six = new Smartphone(6, "Samsung", 80000, "China");
+    Product seven = new Book(7, "Алхимик", 200, "Горвард Лавкрафт");
+    Product eight = new Book(8, "Алхимик", 250, "Питер Джеймс");
 
     @BeforeEach
     public void setUp() {
@@ -28,6 +30,8 @@ public class ProductManagerTest {
         manager.add(four);
         manager.add(five);
         manager.add(six);
+        manager.add(seven);
+        manager.add(eight);
     }
 
     @Test
@@ -51,4 +55,10 @@ public class ProductManagerTest {
         Assertions.assertArrayEquals(expected, actual);
     }
 
+    @Test
+    public void shouldSearchSameBookName() {
+        Product[] actual = manager.searchBy("Алхимик");
+        Product[] expected = new Product[]{seven, eight};
+        Assertions.assertArrayEquals(expected, actual);
+    }
 }
