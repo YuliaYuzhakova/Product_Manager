@@ -1,0 +1,5 @@
+ru\netology\Repository\ProductRepository.class
+ru\netology\domain\Product.class
+ru\netology\domain\Book.class
+ru\netology\domain\Smartphone.class
+ru\netology\Manager\ProductManager.class
